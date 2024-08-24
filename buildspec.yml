@@ -2,9 +2,9 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      java: openjdk8
-
+    commands:
+      - yum update -y
+      - yum -y install java-1.8.0-amazon-corretto-devel
   pre_build:
     commands:
       - mvn clean install
